@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "font1";
+  src: url("../../fonts/Stay_and_Shine.ttf");
+}
+
+.Main {
+  background-image: url("../../assets//fundo_main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}

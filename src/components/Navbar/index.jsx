@@ -18,6 +18,7 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import logo from "../../assets/logo.jpg";
 import CloseIcon from "@mui/icons-material/Close";
+import fundoMenu from '../../assets/fundo_menu.png'
 
 const drawerWidth = 240;
 const navItems = ["Produtos", "Estampas", "Personalize", "Compre Aqui"];
@@ -166,14 +167,18 @@ function Navbar(props) {
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
-          ModalProps={{
+          odalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
+          
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: { xs: "100%", sm: 240 },
+              backgroundImage: `url(${fundoMenu})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover'
             },
           }}
         >

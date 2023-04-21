@@ -6,4 +6,9 @@
 @font-face {
   font-family: "font2";
   src: url("../../fonts/KGDoYouLoveMe.ttf");
+  color: #d7f3fd;
+}
+
+.a {
+  background-image: url("../../assets/fundo_menu.png");
 }
