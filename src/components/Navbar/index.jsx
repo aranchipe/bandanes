@@ -38,13 +38,36 @@ function Navbar(props) {
       <img
         src={logo}
         alt="logo"
-        style={{ width: "20%", borderRadius: "50%" }}
+        style={{
+          width: "20%",
+          borderRadius: "50%",
+          marginBottom: "3vh",
+          boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
+        }}
       />
-      <List>
+      <List
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "left" }}>
-              <ListItemText primary={item} />
+            <ListItemButton
+              sx={{
+                textAlign: "left",
+              }}
+            >
+              <Typography
+                sx={{
+                  fontFamily: "font1",
+                  fontSize: "22px",
+                  color: "white",
+                  textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
+                }}
+              >
+                {item}
+              </Typography>
             </ListItemButton>
           </ListItem>
         ))}
@@ -89,7 +112,11 @@ function Navbar(props) {
               }}
               target="blank"
             >
-              Siga @bandanes_
+              <Typography
+                sx={{ textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)" }}
+              >
+                Siga @bandanes_
+              </Typography>
             </Link>
           </Box>
         </Box>
@@ -115,7 +142,7 @@ function Navbar(props) {
                 edge="start"
                 onClick={handleDrawerToggle}
               >
-                <MenuIcon />
+                <MenuIcon fontSize="large" />
               </IconButton>
             </Box>
           }
@@ -126,6 +153,7 @@ function Navbar(props) {
               style={{
                 width: "12vh",
                 borderRadius: "100%",
+                boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
               }}
             />
           </Box>
@@ -138,8 +166,9 @@ function Navbar(props) {
               sx={{
                 color: "white",
                 fontFamily: "font1",
-                fontSize: "16px",
+                fontSize: "20px",
                 ":hover": { transform: "scale(1.05)" },
+                textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
               }}
               target="blank"
             >

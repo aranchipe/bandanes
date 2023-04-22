@@ -44,6 +44,7 @@ function Main() {
             background: "#FEC2C2",
             borderRadius: "50px",
             height: "50px",
+            boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
           }}
         >
           {/* <img
@@ -57,6 +58,7 @@ function Main() {
               fontFamily: "font1",
               fontSize: "22px",
               color: "white",
+              textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
             }}
           >
             Produtos
@@ -73,6 +75,7 @@ function Main() {
             background: "#FEC2C2",
             borderRadius: "50px",
             height: "50px",
+            boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
           }}
         >
           {/* <img
@@ -86,6 +89,7 @@ function Main() {
               fontFamily: "font1",
               fontSize: "22px",
               color: "white",
+              textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
             }}
           >
             Estampas
@@ -102,6 +106,7 @@ function Main() {
             background: "#FEC2C2",
             borderRadius: "50px",
             height: "50px",
+            boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
           }}
         >
           {/* <img
@@ -115,6 +120,7 @@ function Main() {
               fontFamily: "font1",
               fontSize: "22px",
               color: "white",
+              textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
             }}
           >
             Personalize
@@ -131,6 +137,7 @@ function Main() {
             background: "#FEC2C2",
             borderRadius: "50px",
             height: "50px",
+            boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
           }}
         >
           {/* <img
@@ -147,6 +154,7 @@ function Main() {
               fontFamily: "font1",
               fontSize: "22px",
               color: "white",
+              textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
             }}
           >
             Compre Aqui
