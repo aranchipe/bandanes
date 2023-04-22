@@ -18,7 +18,7 @@ import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import logo from "../../assets/logo.jpg";
 import CloseIcon from "@mui/icons-material/Close";
-import fundoMenu from '../../assets/fundo_menu.png'
+import fundoMenu from "../../assets/fundo_menu.png";
 
 const drawerWidth = 240;
 const navItems = ["Produtos", "Estampas", "Personalize", "Compre Aqui"];
@@ -98,11 +98,18 @@ function Navbar(props) {
             background: "#FEC2C2",
             height: "14vh",
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: { xs: "center", sm: "space-between" },
           }}
         >
           {
-            <Box sx={{ mr: 2, display: { sm: "none" } }}>
+            <Box
+              sx={{
+                mr: 2,
+                display: { sm: "none" },
+                position: "absolute",
+                left: "5vw",
+              }}
+            >
               <IconButton
                 color="inherit"
                 edge="start"
@@ -122,14 +129,16 @@ function Navbar(props) {
               }}
             />
           </Box>
-          <Box sx={{ display: { sm: "none" } }}>
+          <Box
+            sx={{ display: { sm: "none" }, position: "absolute", right: "5vw" }}
+          >
             <Link
               href="https://instagram.com/bandanes_?igshid=YmMyMTA2M2Y="
               underline="none"
               sx={{
                 color: "white",
                 fontFamily: "font1",
-                fontSize: "24px",
+                fontSize: "16px",
                 ":hover": { transform: "scale(1.05)" },
               }}
               target="blank"
@@ -170,15 +179,14 @@ function Navbar(props) {
           odalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          
           sx={{
             display: { xs: "block", sm: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: { xs: "100%", sm: 240 },
               backgroundImage: `url(${fundoMenu})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'cover'
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
             },
           }}
         >

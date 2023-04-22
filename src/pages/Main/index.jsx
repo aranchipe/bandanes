@@ -55,7 +55,7 @@ function Main() {
             sx={{
               zIndex: 1,
               fontFamily: "font1",
-              fontSize: "20px",
+              fontSize: "22px",
               color: "white",
             }}
           >
