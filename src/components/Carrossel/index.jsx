@@ -22,8 +22,11 @@ const Carrossel = () => {
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <div key={index} style={{ backgroundImage: `${image}` }}>
-          <img src={image} alt={`Imagem ${index}`} style={{ width: "100vw" }} />
+        <div
+          key={index}
+          style={{ backgroundImage: `${image}`, width: "100vw" }}
+        >
+          <img src={image} alt={`Imagem ${index}`} style={{ width: "100%" }} />
         </div>
       ))}
     </Slider>

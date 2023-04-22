@@ -127,6 +127,7 @@ function Navbar(props) {
             background: "#FEC2C2",
             height: "14vh",
             display: "flex",
+            width: "100vw",
             justifyContent: { xs: "center", sm: "space-between" },
           }}
         >
