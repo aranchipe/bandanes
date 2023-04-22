@@ -107,13 +107,15 @@ function Navbar(props) {
               sx={{
                 color: "#FEC2C2",
                 fontFamily: "font1",
-                fontSize: "24px",
                 ":hover": { transform: "scale(1.05)" },
               }}
               target="blank"
             >
               <Typography
-                sx={{ textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)" }}
+                sx={{
+                  textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
+                  fontSize: "22px",
+                }}
               >
                 Siga @bandanes_
               </Typography>

@@ -1,26 +1,29 @@
-import React from "react";
 import Slider from "react-slick";
-
-const imagens = [
-  "https://img.freepik.com/fotos-gratis/lindo-retrato-de-cachorro_23-2149218450.jpg",
-  "https://img.freepik.com/fotos-gratis/lindo-retrato-de-cachorro_23-2149218450.jpg",
-  "https://img.freepik.com/fotos-gratis/lindo-retrato-de-cachorro_23-2149218450.jpg",
-];
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import halloween from "../../assets/halloween.png";
+import halloween_pc from "../../assets/halloween_pc.png";
+import novidade from "../../assets/novidade.png";
 
 const Carrossel = () => {
   const settings = {
-    speed: 5000, // tempo de transição entre as imagens
+    dots: false,
+    infinite: true,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000, // tempo de exibição de cada imagem
+    autoplaySpeed: 4000,
+    swipeToSlide: false,
   };
+
+  const images = [halloween_pc, novidade];
 
   return (
     <Slider {...settings}>
-      {imagens.map((imagem) => (
-        <div>
-          <img src={imagem} alt="imagem" sx={{ width: "200px" }} />
+      {images.map((image, index) => (
+        <div key={index} style={{ backgroundImage: `${image}` }}>
+          <img src={image} alt={`Imagem ${index}`} style={{ width: "100vw" }} />
         </div>
       ))}
     </Slider>

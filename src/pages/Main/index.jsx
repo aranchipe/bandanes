@@ -3,26 +3,39 @@ import Navbar from "../../components/Navbar";
 import "./Main.css";
 import halloween from "../../assets/halloween.png";
 import halloween_pc from "../../assets/halloween_pc.png";
+import novidade from "../../assets/novidade.png";
 import fundo_main from "../../assets/fundo_main.png";
 import Box from "@mui/material/Box";
 import { Button, Typography, Grid } from "@mui/material";
 import botao from "../../assets/botao.svg";
+import { useEffect, useState } from "react";
 
 function Main() {
+  const [indice, setIndice] = useState(0);
+
+  setInterval(() => {
+    if (indice === 0) {
+      setIndice(1);
+    } else {
+      setIndice(0);
+    }
+  }, 5000);
+
   return (
     <div className="Main">
       <Navbar />
       {/* <Carrossel /> */}
-      <Box
+      {/* <Box
         sx={{
           width: "100vw",
           height: { xs: "20vh", sm: "70vh" },
-          backgroundImage: `url(${halloween_pc})`,
+          backgroundImage: `url(${indice === 0 ? halloween_pc : novidade})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      ></Box>
+      ></Box> */}
+      <Carrossel />
       <Grid
         container
         sx={{
