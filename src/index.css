@@ -6,6 +6,7 @@
 
 html {
   overflow-y: hidden;
+  min-height: 100vh;
 }
 
 #root {
@@ -14,4 +15,5 @@ html {
 
 body {
   overflow-x: hidden !important;
+  min-height: 100vh;
 }
