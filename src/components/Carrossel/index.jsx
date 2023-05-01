@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import halloween from "../../assets/halloween.png";
 import halloween_pc from "../../assets/halloween_pc.png";
 import novidade from "../../assets/novidade.png";
+import Box from "@mui/material/Box";
 
 const Carrossel = () => {
   const settings = {
@@ -24,7 +25,10 @@ const Carrossel = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          style={{ backgroundImage: `${image}`, width: "100vw" }}
+          style={{
+            backgroundImage: `${image}`,
+            width: "100vw",
+          }}
         >
           <img src={image} alt={`Imagem ${index}`} style={{ width: "100%" }} />
         </div>

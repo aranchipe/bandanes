@@ -19,6 +19,7 @@ import Link from "@mui/material/Link";
 import logo from "../../assets/logo.jpg";
 import CloseIcon from "@mui/icons-material/Close";
 import fundoMenu from "../../assets/fundo_menu.png";
+import instagram from "../../assets/instagram.svg";
 
 const drawerWidth = 240;
 const navItems = ["Produtos", "Estampas", "Personalize", "Compre Aqui"];
@@ -80,52 +81,51 @@ function Navbar(props) {
 
   return (
     <Box>
-      <CssBaseline />
-      <AppBar component="nav">
+      <Box
+        sx={{
+          width: "100vw",
+          height: "4vh",
+          display: { sm: "flex", xs: "flex" },
+          justifyContent: "end",
+          alignItems: "center",
+          px: "2%",
+          background: "rgb(215, 243, 253)",
+          color: "#FEC2C2",
+        }}
+      >
         <Box
           sx={{
-            width: "100vw",
-            height: "4vh",
-            display: { sm: "flex", xs: "none" },
-            justifyContent: "end",
-            alignItems: "center",
-            px: "2%",
-            background: "rgb(215, 243, 253)",
-            color: "#FEC2C2",
+            display: "flex",
+            justifyContent: "space-between",
           }}
         >
-          <Box
+          <Link
+            href="https://instagram.com/bandanes_?igshid=YmMyMTA2M2Y="
+            underline="none"
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
+              color: "#FEC2C2",
+              fontFamily: "font1",
+              ":hover": { transform: "scale(1.05)" },
             }}
+            target="blank"
           >
-            {/* <img src={instagram} alt="instagram" style={{ width: "25px" }} /> */}
-            <Link
-              href="https://instagram.com/bandanes_?igshid=YmMyMTA2M2Y="
-              underline="none"
+            <Typography
               sx={{
-                color: "#FEC2C2",
-                fontFamily: "font1",
-                ":hover": { transform: "scale(1.05)" },
+                textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
+                fontSize: "16px",
               }}
-              target="blank"
             >
-              <Typography
-                sx={{
-                  textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
-                  fontSize: "22px",
-                }}
-              >
-                Siga @bandanes_
-              </Typography>
-            </Link>
-          </Box>
+              @bandanes_
+            </Typography>
+          </Link>
         </Box>
+      </Box>
+      <CssBaseline />
+      <AppBar sx={{ marginTop: "4vh" }} component="nav">
         <Toolbar
           sx={{
             background: "#FEC2C2",
-            height: "14vh",
+            height: "13vh",
             display: "flex",
             width: "100vw",
             justifyContent: { xs: "center", sm: "space-between" },
@@ -160,7 +160,7 @@ function Navbar(props) {
               }}
             />
           </Box>
-          <Box
+          {/* <Box
             sx={{ display: { sm: "none" }, position: "absolute", right: "5vw" }}
           >
             <Link
@@ -177,7 +177,7 @@ function Navbar(props) {
             >
               @bandanes_
             </Link>
-          </Box>
+          </Box> */}
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },

@@ -9,32 +9,16 @@ import Box from "@mui/material/Box";
 import { Button, Typography, Grid } from "@mui/material";
 import botao from "../../assets/botao.svg";
 import { useEffect, useState } from "react";
+import texto from "../../assets/texto.svg";
+import Footer from "../../components/Footer";
+import Link from "@mui/material/Link";
 
 function Main() {
   const [indice, setIndice] = useState(0);
 
-  setInterval(() => {
-    if (indice === 0) {
-      setIndice(1);
-    } else {
-      setIndice(0);
-    }
-  }, 5000);
-
   return (
     <div className="Main">
       <Navbar />
-      {/* <Carrossel /> */}
-      {/* <Box
-        sx={{
-          width: "100vw",
-          height: { xs: "20vh", sm: "70vh" },
-          backgroundImage: `url(${indice === 0 ? halloween_pc : novidade})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></Box> */}
       <Carrossel />
       <Grid
         container
@@ -174,6 +158,10 @@ function Main() {
           </Typography>
         </Grid>
       </Grid>
+      <Box sx={{ width: "100vw", display: "flex", justifyContent: "center" }}>
+        <img src={texto} alt="texto" style={{ width: "90vw" }} />
+      </Box>
+      <Footer />
     </div>
   );
 }
