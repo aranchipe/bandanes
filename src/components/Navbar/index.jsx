@@ -93,6 +93,7 @@ function Navbar(props) {
           color: "#FEC2C2",
           position: "fixed",
           top: "0",
+          zIndex: 2,
         }}
       >
         <Box
