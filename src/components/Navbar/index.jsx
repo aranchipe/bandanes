@@ -85,12 +85,14 @@ function Navbar(props) {
         sx={{
           width: "100vw",
           height: "4vh",
-          display: { sm: "flex", xs: "flex" },
+          display: "flex",
           justifyContent: "end",
           alignItems: "center",
           px: "2%",
           background: "rgb(215, 243, 253)",
           color: "#FEC2C2",
+          position: "fixed",
+          top: "0",
         }}
       >
         <Box
@@ -104,15 +106,15 @@ function Navbar(props) {
             underline="none"
             sx={{
               color: "#FEC2C2",
-              fontFamily: "font1",
               ":hover": { transform: "scale(1.05)" },
             }}
             target="blank"
           >
             <Typography
               sx={{
-                textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
-                fontSize: "16px",
+                fontFamily: "font1",
+                textShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+                fontSize: "20px",
               }}
             >
               @bandanes_
@@ -122,85 +124,71 @@ function Navbar(props) {
       </Box>
       <CssBaseline />
       <AppBar sx={{ marginTop: "4vh" }} component="nav">
-        <Toolbar
-          sx={{
-            background: "#FEC2C2",
-            height: "13vh",
-            display: "flex",
-            width: "100vw",
-            justifyContent: { xs: "center", sm: "space-between" },
-          }}
-        >
-          {
-            <Box
-              sx={{
-                mr: 2,
-                display: { sm: "none" },
-                position: "absolute",
-                left: "5vw",
-              }}
-            >
-              <IconButton
-                color="inherit"
-                edge="start"
-                onClick={handleDrawerToggle}
-              >
-                <MenuIcon fontSize="large" />
-              </IconButton>
-            </Box>
-          }
-          <Box>
-            <img
-              src={logo}
-              alt="logo"
-              style={{
-                width: "12vh",
-                borderRadius: "100%",
-                boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
-              }}
-            />
-          </Box>
-          {/* <Box
-            sx={{ display: { sm: "none" }, position: "absolute", right: "5vw" }}
-          >
-            <Link
-              href="https://instagram.com/bandanes_?igshid=YmMyMTA2M2Y="
-              underline="none"
-              sx={{
-                color: "white",
-                fontFamily: "font1",
-                fontSize: "20px",
-                ":hover": { transform: "scale(1.05)" },
-                textShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
-              }}
-              target="blank"
-            >
-              @bandanes_
-            </Link>
-          </Box> */}
-          <Box
+        <Box>
+          <Toolbar
             sx={{
-              display: { xs: "none", sm: "flex" },
+              background: "#FEC2C2",
+              display: "flex",
+              width: "100vw",
+              position: "fixed",
+              top: "4vh",
+              justifyContent: { xs: "center", sm: "space-between" },
             }}
           >
-            {navItems.map((item) => (
-              <Button
-                key={item}
+            {
+              <Box
                 sx={{
-                  fontFamily: "font1",
-                  fontSize: "24px",
-                  color: "#fff",
-                  ":hover": {
-                    color: "rgb(215, 243, 253)",
-                    background: "transparent",
-                  },
+                  mr: 2,
+                  display: { sm: "none" },
+                  position: "absolute",
+                  left: "5vw",
                 }}
               >
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
+                <IconButton
+                  color="inherit"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                >
+                  <MenuIcon fontSize="large" />
+                </IconButton>
+              </Box>
+            }
+            <Box>
+              <img
+                src={logo}
+                alt="logo"
+                style={{
+                  width: "12vh",
+                  borderRadius: "100%",
+                  boxShadow: "0px 5px 4px rgba(0, 0, 0, 0.25)",
+                }}
+              />
+            </Box>
+
+            <Box
+              sx={{
+                display: { xs: "none", sm: "flex" },
+              }}
+            >
+              {navItems.map((item) => (
+                <Button
+                  key={item}
+                  sx={{
+                    fontFamily: "font1",
+                    fontSize: "24px",
+                    color: "#fff",
+                    ":hover": {
+                      color: "rgb(215, 243, 253)",
+                      background: "transparent",
+                    },
+                  }}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </Box>
       </AppBar>
       <Box component="nav">
         <Drawer
