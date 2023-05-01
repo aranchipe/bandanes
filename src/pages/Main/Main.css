@@ -2,3 +2,7 @@
   font-family: "font1";
   src: url("../../fonts/Stay_and_Shine.ttf");
 }
+
+.Main {
+  min-height: 100vh;
+}

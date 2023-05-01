@@ -10,7 +10,7 @@ export default function Footer() {
         sx={{
           background: "#FEC2C2",
           position: "absolute",
-          bottom: "0vh",
+          bottom: "0",
           width: "100vw",
           display: "flex",
           justifyContent: "space-between",

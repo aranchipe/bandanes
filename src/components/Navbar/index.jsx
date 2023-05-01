@@ -91,7 +91,7 @@ function Navbar(props) {
           px: "2%",
           background: "rgb(215, 243, 253)",
           color: "#FEC2C2",
-          position: "fixed",
+          position: "absolute",
           top: "0",
         }}
       >
@@ -130,8 +130,7 @@ function Navbar(props) {
               background: "#FEC2C2",
               display: "flex",
               width: "100vw",
-              position: "fixed",
-              top: "4vh",
+              position: "unset",
               justifyContent: { xs: "center", sm: "space-between" },
             }}
           >
