@@ -93,7 +93,6 @@ function Navbar(props) {
           color: "#FEC2C2",
           position: "fixed",
           top: "0",
-          zIndex: "1",
         }}
       >
         <Box
@@ -123,14 +122,14 @@ function Navbar(props) {
           </Link>
         </Box>
       </Box>
-      {/* <AppBar component="nav">
+      <AppBar component="nav">
         <Box>
           <Toolbar
             sx={{
               background: "#FEC2C2",
               display: "flex",
               width: "100vw",
-              position: "absolute",
+              position: "fixed",
               top: "4vh",
               justifyContent: { xs: "center", sm: "space-between" },
             }}
@@ -189,8 +188,8 @@ function Navbar(props) {
             </Box>
           </Toolbar>
         </Box>
-      </AppBar> */}
-      {/* <Box component="nav">
+      </AppBar>
+      <Box component="nav">
         <Drawer
           container={container}
           variant="temporary"
@@ -221,10 +220,10 @@ function Navbar(props) {
           />
           {drawer}
         </Drawer>
-      </Box> */}
-      {/* <Box component="main" sx={{ p: 3 }}>
+      </Box>
+      <Box component="main" sx={{ p: "4vh" }}>
         <Toolbar />
-      </Box> */}
+      </Box>
     </Box>
   );
 }
