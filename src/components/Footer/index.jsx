@@ -9,8 +9,6 @@ export default function Footer() {
       <Box
         sx={{
           background: "#FEC2C2",
-          position: "absolute",
-          bottom: "0",
           width: "100vw",
           display: "flex",
           justifyContent: "space-between",

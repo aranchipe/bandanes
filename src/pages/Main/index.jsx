@@ -158,7 +158,14 @@ function Main() {
           </Typography>
         </Grid>
       </Grid>
-      <Box sx={{ width: "100vw", display: "flex", justifyContent: "center" }}>
+      <Box
+        sx={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "10vh",
+        }}
+      >
         <img src={texto} alt="texto" style={{ width: "90vw" }} />
       </Box>
       <Footer />

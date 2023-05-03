@@ -5,7 +5,7 @@
 }
 
 html {
-  overflow-y: hidden;
+  overflow-y: auto;
   min-height: 100vh;
 }
 
@@ -15,5 +15,5 @@ html {
 
 body {
   overflow-x: hidden !important;
-  min-height: 100vh;
+  height: 100vh;
 }
