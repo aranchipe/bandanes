@@ -163,10 +163,29 @@ function Main() {
           width: "100vw",
           display: "flex",
           justifyContent: "center",
-          marginBottom: "10vh",
         }}
       >
-        <img src={texto} alt="texto" style={{ width: "90vw" }} />
+        <Box
+          sx={{
+            width: "100vw",
+            display: "flex",
+            justifyContent: "center",
+            width: { xs: "90vw", sm: "20vw" },
+          }}
+        >
+          <img src={texto} alt="texto" style={{ width: "100%" }} />
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          width: "100vw",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "30vh",
+        }}
+      >
+        <Typography sx={{ fontSize: "40px" }}>Mensagens</Typography>
       </Box>
       <Footer />
     </div>
