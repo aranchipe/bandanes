@@ -1,12 +1,11 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import halloween from "../../assets/halloween.png";
-import halloween_pc from "../../assets/halloween_pc.png";
-import novidade from "../../assets/novidade.png";
-import Box from "@mui/material/Box";
+import { Box, CardMedia } from '@mui/material';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import ImageCarousel1 from '../../assets/imageCarousel1.png';
+import ImageCarousel2 from '../../assets/imageCarousel2.png';
 
-const Carrossel = () => {
+export default function Carrossel() {
   const settings = {
     dots: false,
     infinite: true,
@@ -18,23 +17,15 @@ const Carrossel = () => {
     swipeToSlide: false,
   };
 
-  const images = [halloween_pc, novidade];
+  const images = [ImageCarousel1, ImageCarousel2];
 
   return (
     <Slider {...settings}>
       {images.map((image, index) => (
-        <div
-          key={index}
-          style={{
-            backgroundImage: `${image}`,
-            width: "100vw",
-          }}
-        >
-          <img src={image} alt={`Imagem ${index}`} style={{ width: "100%" }} />
-        </div>
+        <Box key={index} sx={{ backgroundImage: `${image}`, width: '100%' }}>
+          <CardMedia component="img" image={image} sx={{ width: '100%', height: '50rem' }} />
+        </Box>
       ))}
     </Slider>
   );
-};
-
-export default Carrossel;
+}
