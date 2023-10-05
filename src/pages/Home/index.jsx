@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Header from '../../components/Header/index';
 import Main from '../../components/Main';
+import BasicMenu from '../../components/BasicMenu';
 
 export default function Home() {
   return (
