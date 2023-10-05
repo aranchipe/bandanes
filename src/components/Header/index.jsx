@@ -1,8 +1,8 @@
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { CardMedia, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import LogoBandanes from '../../assets/logo.jpg';
+import BasicMenu from '../BasicMenu';
 
 export default function Header() {
   return (
@@ -20,16 +20,11 @@ export default function Header() {
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
         <CardMedia component="img" image={LogoBandanes} sx={{ width: '8rem' }} />
 
-        <Box sx={{ display: 'flex', gap: 4 }}>
+        <Box sx={{ display: 'flex', gap: 4, alignItems: 'center' }}>
           <Typography variant="body1" sx={{ cursor: 'pointer' }}>
             Sobre
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography variant="body1" sx={{ cursor: 'pointer' }}>
-              Produtos
-            </Typography>
-            <KeyboardArrowDownIcon sx={{ fontSize: '2rem', color: '#23242d', cursor: 'pointer' }} />
-          </Box>
+          <BasicMenu />
         </Box>
       </Box>
 
